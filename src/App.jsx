@@ -3,6 +3,7 @@ import About from "./Pages/About/About";
 import Home from "./Pages/Home/Home";
 import Contact from "./Pages/Contact/Contact";
 import Nav from "./Content/Navigation/Nav";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
