@@ -15,8 +15,7 @@ const themes = {
 export function DataContent({ children }) {
   const [state, setState] = useState([]);
   const [theme, setTheme] = useState(themes.Light);
-
-  const toggletheme = () => {
+  const toggleTheme = () => {
     theme === themes.Light ? setTheme(themes.Dark) : setTheme(themes.Light);
   };
   async function fetchdata() {
@@ -35,7 +34,7 @@ export function DataContent({ children }) {
   return (
     <div>
       <NewContext.Provider
-        value={{ state, setState, theme, setTheme, toggletheme }}
+        value={{ state, setState, theme, setTheme, toggleTheme }}
       >
         {children}
       </NewContext.Provider>

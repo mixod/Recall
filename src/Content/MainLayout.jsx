@@ -8,10 +8,9 @@ function MainLayout() {
     <div>
       <DataContent>
         <Nav />
-
-        <Outlet />
-        <Footer />
       </DataContent>
+      <Outlet />
+      <Footer />
     </div>
   );
 }

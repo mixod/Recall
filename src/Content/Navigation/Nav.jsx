@@ -12,15 +12,16 @@ function Nav() {
   };
   return (
     <>
-      <div
-        style={{
-          color: theme.color,
-          background: theme.background,
-          height: "100%",
-          width: "100%",
-        }}
-      >
-        <div className="bg-gray-100 shadow shadow-gray-200 h-10">
+      <div>
+        <div
+          className=" h-10"
+          style={{
+            color: theme.color,
+            background: theme.background,
+            height: "100%",
+            width: "100%",
+          }}
+        >
           <div
             className={
               ShowMediaIcons

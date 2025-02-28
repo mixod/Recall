@@ -4,7 +4,7 @@ import Home from "./Pages/Home/Home";
 import Contact from "./Pages/Contact/Contact";
 import { Route, Routes } from "react-router-dom";
 import MainLayout from "./Content/MainLayout";
-import { DataContent } from "./DataContent";
+import { DataContent } from "./Pages/DataContent";
 
 function App() {
   return (
