@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { NewContext } from "../DataContent";
+import { NewContext } from "../../DataContent";
 
 function Home() {
   const { state } = useContext(NewContext);

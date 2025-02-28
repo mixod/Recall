@@ -1,13 +1,17 @@
 import { Outlet } from "react-router-dom";
 import Nav from "./Navigation/Nav";
 import Footer from "./Footer/Footer";
+import { DataContent } from "../Pages/DataContent";
 
 function MainLayout() {
   return (
     <div>
-      <Nav />
-      <Outlet />
-      <Footer />
+      <DataContent>
+        <Nav />
+
+        <Outlet />
+        <Footer />
+      </DataContent>
     </div>
   );
 }
