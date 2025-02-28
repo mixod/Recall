@@ -5,6 +5,7 @@ import Contact from "./Pages/Contact/Contact";
 import { Route, Routes } from "react-router-dom";
 import MainLayout from "./Content/MainLayout";
 import { DataContent } from "./Pages/DataContent";
+import MainRoute from "./Pages/Home/Routing/MainRoute";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
               </DataContent>
             }
           />
+          <Route path="/home/:id" element={<MainRoute />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
         </Route>

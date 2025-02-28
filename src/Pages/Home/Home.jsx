@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { NewContext } from "../../Pages/DataContent";
+import { NavLink } from "react-router-dom";
 
 function Home() {
   const { state, theme, toggleTheme } = useContext(NewContext);
@@ -24,6 +25,9 @@ function Home() {
                   alt={item.title}
                   className=" w-48 h-48 flex mb-2"
                 />
+                <NavLink to={"/home/" + item.id}>
+                  <h2>{item.title}</h2>
+                </NavLink>
               </div>
             </div>
           ))}
