@@ -25,14 +25,12 @@ function Nav() {
           <div
             className={
               ShowMediaIcons
-                ? " flex flex-col flex-wrap justify-center align-center h-10  top-14 fixed w-full lg:static"
+                ? " flex flex-col flex-wrap justify-center align-center h-50 lg:h-10  top-9 fixed w-fixed px-10 lg:static bg-blue-300"
                 : "hidden lg:flex justify-end"
             }
           >
-            <button onClick={toggleTheme}>
-              <FaAffiliatetheme />
-            </button>
-            <ul className="flex justify-center gap-10 max-w-6xl mx-auto p-4 ">
+            <div className="flex"></div>
+            <ul className="flex flex-col lg:flex-row justify-center gap-3 lg:gap-10 max-w-6xl mx-auto p-1 lg:p-4">
               <li>
                 <NavLink
                   to="/home"
@@ -65,6 +63,11 @@ function Nav() {
                 >
                   Contact
                 </NavLink>
+              </li>
+              <li>
+                <button onClick={toggleTheme}>
+                  <FaAffiliatetheme />
+                </button>
               </li>
             </ul>
           </div>
