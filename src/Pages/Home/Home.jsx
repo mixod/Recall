@@ -1,9 +1,9 @@
 import { useContext } from "react";
-import { NewContext } from "../../Pages/DataContent";
+import { NewContext } from "../DataContent";
 import { NavLink } from "react-router-dom";
 
 function Home() {
-  const { state, theme, toggleTheme } = useContext(NewContext);
+  const { state, theme } = useContext(NewContext);
   return (
     <div
       style={{
@@ -13,8 +13,6 @@ function Home() {
         width: "100%",
       }}
     >
-      <button onClick={toggleTheme}>aa</button>
-
       <div className="max-w-6xl mx-auto justify-center items-center p-5 px-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {state.map((item) => (
