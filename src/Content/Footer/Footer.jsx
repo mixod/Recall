@@ -1,5 +1,13 @@
+import { useContext } from "react";
+import { NewContext } from "../../Pages/DataContent";
+
 function Footer() {
-  return <div>Footer</div>;
+  const { theme } = useContext(NewContext);
+  return (
+    <div style={{ color: theme.color, backgroundColor: theme.background }}>
+      Footer
+    </div>
+  );
 }
 
 export default Footer;
