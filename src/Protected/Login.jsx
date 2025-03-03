@@ -1,13 +1,16 @@
 import { Form } from "antd";
 
 function Login() {
+  const submit = (values) => {
+    console.log(values);
+  };
   return (
     <div>
-      <Form>
+      <Form onFinish={submit}>
         <Form.Item
-          label="Name"
-          name="name"
-          rules={[{ required: true, message: "please input name" }]}
+          label="Email"
+          name="email"
+          rules={[{ required: true, message: "please input email" }]}
         >
           <Input />
         </Form.Item>
@@ -18,6 +21,9 @@ function Login() {
         >
           <Input />
         </Form.Item>
+        <Button className="primary" htmlType="submit">
+          Login
+        </Button>
       </Form>
     </div>
   );
