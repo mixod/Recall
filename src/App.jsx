@@ -6,6 +6,7 @@ import { Route, Routes } from "react-router-dom";
 import MainLayout from "./Content/MainLayout";
 import MainRoute from "./Pages/Home/Routing/MainRoute";
 import Register from "./Protected/Register";
+import Login from "./Protected/Login";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       </Routes>
       <Routes>
         <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </div>
   );
