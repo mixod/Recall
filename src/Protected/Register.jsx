@@ -27,8 +27,12 @@ function Register() {
 
   return (
     <div className="flex max-w-6xl mx-auto justify-center items-center mt-30">
-      <div className="shadow shadow-gray-400 w-80 p-5">
+      <div className="shadow-xl w-100  p-10">
         <Form onFinish={submit} layout="vertical ">
+          <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">
+            Register
+          </h2>
+
           <Form.Item
             label="Full Name"
             name="full_name"
@@ -57,7 +61,7 @@ function Register() {
           >
             <Input />
           </Form.Item>
-          <Button type="primary" htmlType="submit">
+          <Button type="primary" htmlType="submit" className="w-full">
             Register
           </Button>
         </Form>
