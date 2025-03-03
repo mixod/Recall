@@ -5,6 +5,7 @@ import Contact from "./Pages/Contact/Contact";
 import { Route, Routes } from "react-router-dom";
 import MainLayout from "./Content/MainLayout";
 import MainRoute from "./Pages/Home/Routing/MainRoute";
+import Register from "./Protected/Register";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/home/:id" element={<MainRoute />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/register" element={<Register />} />
         </Route>
       </Routes>
     </div>
