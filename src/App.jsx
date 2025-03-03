@@ -17,8 +17,10 @@ function App() {
           <Route path="/home/:id" element={<MainRoute />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/register" element={<Register />} />
         </Route>
+      </Routes>
+      <Routes>
+        <Route path="/register" element={<Register />} />
       </Routes>
     </div>
   );
