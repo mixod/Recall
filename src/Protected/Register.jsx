@@ -3,22 +3,19 @@ import { API_BASE_URL } from "../../apiconfig";
 import axios from "axios";
 
 function Register() {
-  //   const form = Form.useForm();
   async function registerFunction(values) {
+    console.log(values);
     try {
-      const res = await axios.post(
-        `${API_BASE_URL}/api/v1/register`,
-        {
-          email: values.email,
-          full_name: values.full_name,
-          password: values.password,
+      const body = {
+        email: values.email,
+        full_name: values.full_name,
+        password: values.password,
+      };
+      const res = await axios.post(`${API_BASE_URL}/api/v1/register`, body, {
+        headers: {
+          "Content-Type": "application/json",
         },
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
+      });
       console.log(res);
     } catch (error) {
       console.log(error);
