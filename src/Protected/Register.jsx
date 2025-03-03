@@ -26,40 +26,42 @@ function Register() {
   };
 
   return (
-    <div>
-      <Form onFinish={submit}>
-        <Form.Item
-          label="Full Name"
-          name="full_name"
-          rules={[{ required: true, message: "Please input your username!" }]}
-        >
-          <Input />
-        </Form.Item>
-        <Form.Item
-          label="Email"
-          name="email"
-          rules={[{ required: true, message: "Please input your email!" }]}
-        >
-          <Input />
-        </Form.Item>
-        <Form.Item
-          label="Phone No"
-          name="phone_number"
-          rules={[{ required: true, message: "Please input your phone no!" }]}
-        >
-          <Input />
-        </Form.Item>
-        <Form.Item
-          label="Password"
-          name="password"
-          rules={[{ required: true, message: "Please input your phone no!" }]}
-        >
-          <Input />
-        </Form.Item>
-        <Button type="primary" htmlType="submit">
-          Register
-        </Button>
-      </Form>
+    <div className="flex max-w-6xl mx-auto justify-center items-center mt-30">
+      <div className="shadow shadow-gray-400 w-80 p-5">
+        <Form onFinish={submit} layout="vertical ">
+          <Form.Item
+            label="Full Name"
+            name="full_name"
+            rules={[{ required: true, message: "Please input your username!" }]}
+          >
+            <Input />
+          </Form.Item>
+          <Form.Item
+            label="Email"
+            name="email"
+            rules={[{ required: true, message: "Please input your email!" }]}
+          >
+            <Input />
+          </Form.Item>
+          <Form.Item
+            label="Phone No"
+            name="phone_number"
+            rules={[{ required: true, message: "Please input your phone no!" }]}
+          >
+            <Input />
+          </Form.Item>
+          <Form.Item
+            label="Password"
+            name="password"
+            rules={[{ required: true, message: "Please input your phone no!" }]}
+          >
+            <Input />
+          </Form.Item>
+          <Button type="primary" htmlType="submit">
+            Register
+          </Button>
+        </Form>
+      </div>
     </div>
   );
 }
