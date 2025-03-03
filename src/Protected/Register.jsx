@@ -1,16 +1,36 @@
-import { Form, Input } from "antd";
+import { Form, Input, Button } from "antd";
+import { API_BASE_URL } from "../../apiconfig";
+import axios from "axios";
 
 function Register() {
-  // async function registerFunction() {
-  //     try{
-  //         const response
-  //     }
-  // }
-  //
+  //   const form = Form.useForm();
+  async function registerFunction(values) {
+    try {
+      const res = await axios.post(
+        `${API_BASE_URL}/api/v1/register`,
+        {
+          email: values.email,
+          full_name: values.full_name,
+          password: values.password,
+        },
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      console.log(res);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  const submit = (values) => {
+    registerFunction(values);
+  };
 
   return (
     <div>
-      <Form>
+      <Form onFinish={submit}>
         <Form.Item
           label="Full Name"
           name="full_name"
@@ -39,34 +59,12 @@ function Register() {
         >
           <Input />
         </Form.Item>
+        <Button type="primary" htmlType="submit">
+          Register
+        </Button>
       </Form>
     </div>
   );
 }
 
 export default Register;
-
-// const registerFn = async () => {
-//     try {
-//       const res = await axios.post(
-//         `${API_BASE_URL}/api/v1/register`,
-//         {
-//           email: "nepal@gmail.com",
-//           full_name: "nepal",
-//           password: "password",
-//         },
-//         {
-//           headers: {
-//             "Content-Type": "application/json",
-//           },
-//         }
-//       );
-//       console.log(res);
-//     } catch (error) {
-//       console.log(error);
-//     }
-//   };
-
-// <>
-//   <button onClick={registerFn}>jjj</button>
-// </>
