@@ -1,8 +1,13 @@
 import { Form, Input, Button } from "antd";
 import { API_BASE_URL } from "../../apiconfig";
 import axios from "axios";
+import { Navigate, useNavigate } from "react-router-dom";
 
 function Register() {
+  const navigate = useNavigate();
+  if (localStorage.getItem("token")) {
+    return <Navigate to="/home" />;
+  }
   async function registerFunction(values) {
     console.log(values);
     try {
@@ -11,12 +16,12 @@ function Register() {
         full_name: values.full_name,
         password: values.password,
       };
-      const res = await axios.post(`${API_BASE_URL}/api/v1/register`, body, {
+      await axios.post(`${API_BASE_URL}/api/v1/register`, body, {
         headers: {
           "Content-Type": "application/json",
         },
       });
-      console.log(res);
+      navigate("/login");
     } catch (error) {
       console.log(error);
     }

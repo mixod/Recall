@@ -1,9 +1,13 @@
 import { Button, Form, Input } from "antd";
-import Password from "antd/es/input/Password";
 import axios from "axios";
 import { API_BASE_URL } from "../../apiconfig";
+import { Navigate, useNavigate } from "react-router-dom";
 
 function Login() {
+  const navigate = useNavigate();
+  if (localStorage.getItem("token")) {
+    return <Navigate to="/home" replace />;
+  }
   const loginFu = async (values) => {
     try {
       const response = await axios.post(
@@ -14,11 +18,13 @@ function Login() {
         },
         {
           headers: {
-            "Content-Type": "application/json",
+            "Content-Type": "application/x-www-form-urlencoded",
           },
         }
       );
+      localStorage.setItem("token", response.data.access_token);
       console.log(response);
+      navigate("/home");
     } catch (error) {
       console.log(error);
     }

@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { NewContext } from "../../Pages/DataContent";
 import { FaAffiliatetheme } from "react-icons/fa";
+import { Button, Popconfirm } from "antd";
 
 function Nav() {
   const { theme, toggleTheme } = useContext(NewContext);
@@ -10,6 +11,12 @@ function Nav() {
   const handleMenuClick = () => {
     setShowMediaIcons(false);
   };
+
+  const logout = () => {
+    localStorage.removeItem("token");
+    window.location.reload();
+  };
+
   return (
     <>
       <div>
@@ -68,6 +75,17 @@ function Nav() {
                 <button onClick={toggleTheme}>
                   <FaAffiliatetheme />
                 </button>
+              </li>
+              <li>
+                <Popconfirm
+                  title="logout"
+                  description="Are you sure to logout?"
+                  onConfirm={logout}
+                  okText="Yes"
+                  cancelText="No"
+                >
+                  <Button>Logout</Button>
+                </Popconfirm>
               </li>
             </ul>
           </div>
