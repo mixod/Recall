@@ -42,7 +42,7 @@ function Nav() {
                 <NavLink
                   to="/home"
                   className={({ isActive, isPending }) =>
-                    isPending ? "pending" : isActive ? "text-amber-500" : ""
+                    isPending ? "pending" : isActive ? "text-blue-500" : ""
                   }
                   onClick={handleMenuClick}
                 >
@@ -53,7 +53,7 @@ function Nav() {
                 <NavLink
                   to="/about"
                   className={({ isActive, isPending }) =>
-                    isPending ? "pending" : isActive ? "text-amber-500" : ""
+                    isPending ? "pending" : isActive ? "text-blue-500" : ""
                   }
                   onClick={handleMenuClick}
                 >
