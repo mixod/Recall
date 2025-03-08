@@ -11,12 +11,6 @@ function About() {
       >
         About
       </div>
-      <div
-        className="text-2xl"
-        style={{ color: theme.color, backgroundColor: theme.background }}
-      >
-        About
-      </div>
     </>
   );
 }
