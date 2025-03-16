@@ -72,6 +72,9 @@ function Nav() {
                 </NavLink>
               </li>
               <li>
+                <NavLink to="/service">Service</NavLink>
+              </li>
+              <li>
                 <button onClick={toggleTheme}>
                   <FaAffiliatetheme />
                 </button>
