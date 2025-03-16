@@ -8,6 +8,7 @@ import MainRoute from "./Pages/Home/Routing/MainRoute";
 import Register from "./Protected/Register";
 import Login from "./Protected/Login";
 import ProtectedRoute from "./Protected/ProtectedRoute";
+import Service from "./Pages/Service/Service";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Route path="/home/:id" element={<MainRoute />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/service" element={<Service />} />
           </Route>
         </Route>
       </Routes>
