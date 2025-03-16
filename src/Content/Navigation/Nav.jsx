@@ -72,7 +72,15 @@ function Nav() {
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/service">Service</NavLink>
+                <NavLink
+                  to="/service"
+                  className={({ isActive, isPending }) =>
+                    isPending ? "pending" : isActive ? "text-amber-500" : ""
+                  }
+                  onClick={handleMenuClick}
+                >
+                  Service
+                </NavLink>
               </li>
               <li>
                 <button onClick={toggleTheme}>
