@@ -38,32 +38,16 @@ function Register() {
             Register
           </h2>
 
-          <Form.Item
-            label="Full Name"
-            name="full_name"
-            rules={[{ required: true, message: "Please input your username!" }]}
-          >
+          <Form.Item label="Full Name" name="full_name">
             <Input />
           </Form.Item>
-          <Form.Item
-            label="Email"
-            name="email"
-            rules={[{ required: true, message: "Please input your email!" }]}
-          >
+          <Form.Item label="Email" name="email">
             <Input />
           </Form.Item>
-          <Form.Item
-            label="Phone No"
-            name="phone_number"
-            rules={[{ required: true, message: "Please input your phone no!" }]}
-          >
+          <Form.Item label="Phone No" name="phone_number">
             <Input />
           </Form.Item>
-          <Form.Item
-            label="Password"
-            name="password"
-            rules={[{ required: true, message: "Please input your phone no!" }]}
-          >
+          <Form.Item label="Password" name="password">
             <Input />
           </Form.Item>
           <Button type="primary" htmlType="submit" className="w-full">
