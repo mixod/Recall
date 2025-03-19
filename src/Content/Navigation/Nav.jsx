@@ -73,6 +73,17 @@ function Nav() {
               </li>
               <li>
                 <NavLink
+                  to="/ts"
+                  className={({ isActive, isPending }) =>
+                    isPending ? "pending" : isActive ? "text-amber-500" : ""
+                  }
+                  onClick={handleMenuClick}
+                >
+                  TanStack
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
                   to="/service"
                   className={({ isActive, isPending }) =>
                     isPending ? "pending" : isActive ? "text-amber-500" : ""

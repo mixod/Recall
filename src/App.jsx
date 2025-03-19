@@ -7,22 +7,23 @@ import MainLayout from "./Content/MainLayout";
 import MainRoute from "./Pages/Home/Routing/MainRoute";
 import Register from "./Protected/Register";
 import Login from "./Protected/Login";
-import ProtectedRoute from "./Protected/ProtectedRoute";
 import Service from "./Pages/Service/Service";
+import TanStack from "./Pages/Contentsss/TanStack";
 
 function App() {
   return (
     <div>
       <Routes>
         <Route element={<MainLayout />}>
-          <Route element={<ProtectedRoute />}>
-            <Route path="/" element={<Home />} />
-            <Route path="/home" element={<Home />} />
-            <Route path="/home/:id" element={<MainRoute />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/service" element={<Service />} />
-          </Route>
+          {/* <Route element={<ProtectedRoute />}> */}
+          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/home/:id" element={<MainRoute />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/service" element={<Service />} />
+          <Route path="/ts" element={<TanStack />} />
+          {/* </Route> */}
         </Route>
       </Routes>
       <Routes>
