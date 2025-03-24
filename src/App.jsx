@@ -9,6 +9,7 @@ import Register from "./Protected/Register";
 import Login from "./Protected/Login";
 import Service from "./Pages/Service/Service";
 import TanStack from "./Pages/Contentsss/TanStack";
+import ErrorPage from "./Pages/Contentsss/ErrorPage";
 
 function App() {
   return (
@@ -23,6 +24,8 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/service" element={<Service />} />
           <Route path="/ts" element={<TanStack />} />
+          <Route path="/error" element={<ErrorPage />} />
+
           {/* </Route> */}
         </Route>
       </Routes>
