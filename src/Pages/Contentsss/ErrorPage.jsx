@@ -16,7 +16,7 @@ const ErrorPage = () => {
           to="/"
           className="inline-block px-6 py-3 mt-4 text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors duration-300"
         >
-          Home
+          Back to Home
         </Link>
       </div>
     </div>
